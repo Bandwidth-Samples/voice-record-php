@@ -9,12 +9,7 @@ on:
 
 jobs:
   contract-test:
-    name: Contract Test (${{ matrix.os }})
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+    name: Contract Test
     uses: Bandwidth-Samples/sample-app-tooling/.github/workflows/php.yml@main
     with:
       sample: voice-record
-      os: ${{ matrix.os }}
